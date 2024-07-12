@@ -1,4 +1,3 @@
-
 interface ProfileImage {
   small: string;
   medium: string;
@@ -59,23 +58,6 @@ export interface SearchResults {
   total: number;
   total_pages: number;
   results: Photo[];
-}
-
- export interface Image {
-  id: string;
-  description: string;
-  alt_description: string;
-  urls: {
-    raw: string;
-    full: string;
-    regular: string;
-    small: string;
-    thumb: string;
-  };
-}
-
-export interface FetchImagesResponse {
-  results: Image[];
 }
 
 export type FetchImages = (query: string, page: number) => Promise<Photo[]>;
